@@ -106,9 +106,6 @@ fixed_percent_risked = 0.05 #1トレードあたりの許容リスク
 ruin_point_drawdown  = 0.5 #口座の破産ドローダウン
 unit_of_money        = 20 #資金のユニット数
 
-path <- getwd()
-setwd(paste0(path, "/", "/image"))
-png("risk_ruin_demo.png", width = 1000)
 risk_of_ruin(
         accuracy,
         payoff_ratio,
@@ -118,5 +115,3 @@ risk_of_ruin(
         ruin_point_drawdown,
         unit_of_money
 )
-dev.off()
-setwd(path)
